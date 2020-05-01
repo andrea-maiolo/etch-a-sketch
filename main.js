@@ -28,7 +28,7 @@ gridItem.forEach((div) => {
 function start(a) {
 	document.body.removeChild(container);
 	do {
-		a = (prompt("Please enter the number of columns adn rows that you want(max 128)"));
+		a = (prompt("Please enter grid area(max 128)"));
 	} while (isNaN(a) || a > 128 || a < 1);
 	powerOf = Math.pow(a, 2);
 	container = document.createElement('div');
