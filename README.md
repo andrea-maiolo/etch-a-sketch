@@ -1,2 +1,2 @@
 # etch-a-sketch
-etch-a-sketch project
+create a grid that with JS change color when mouse is hovered over.
