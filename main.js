@@ -8,6 +8,8 @@ var randomColor = false;
 var blackColor = false;
 var eraseColor = false;
 var container = document.querySelector('#container');
+let buttonsDiv = document.querySelector('.buttons');
+let main = document.querySelector('.content');
 for (let i = 0; i < 256; i++) {
 	container.appendChild(document.createElement('div'))
 }
@@ -17,6 +19,10 @@ divs.forEach((div) => {
 	div.classList.add("borderGrid")
 	container.classList.remove("gridItem");
 	container.classList.remove("borderGrid");
+	buttonsDiv.classList.remove('gridItem');
+	buttonsDiv.classList.remove('borderGrid');
+	main.classList.remove('gridItem');
+	main.classList.remove('borderGrid');
 })
 container.style.gridTemplateColumns = "repeat(16, 1fr)";
 container.style.gridTemplateRows = "repeat(16, 1fr)";

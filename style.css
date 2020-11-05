@@ -1,21 +1,46 @@
+/* this is the main div that conteins everything */
+.content{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+/*these are the buttons displayed as grid*/
+.buttons{
+	margin-top:15px;
+	display: grid;
+	justify-content: left;
+	grid-template-columns: repeat(3, 100px);
+    grid-template-rows:repeat(2, 80px); 
+    gap: 2px 2px;
+    grid-template-areas:
+        "Reset rainbow fine"
+        "toggle black erase";
+}
+
+#rainbow {grid-area: rainbow;}
+
+#fine {grid-area: fine;}
+
+#toggle {grid-area: toggle;}
+
+#black {grid-area: black;}
+
+#erase {grid-area: erase;}
+
+/*the button style*/
 button {
 	display: block;
 	border: none;
-	padding: 1rem;
-	margin: 0 auto;
-	text-decoration: none;
 	background: #0069ed;
 	color: #ffffff;
-	font-family: sans-serif;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: 1rem;
 	cursor: pointer;
 	text-align: center;
 	transition: 250ms ease-in-out,
 		transform 150ms ease;
-	-webkit-appearance: none;
-	-moz-appearance: none;
 }
-
+/*more style for when buttons are clicked*/
 button:hover,
 button:focus {
 	background: #0053ba;
@@ -29,42 +54,16 @@ button:focus {
 button:active {
 	transform: scale(0.99);
 }
-
-body {
-	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg/280px-Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg)
-}
-
-#rainbow {
-	margin-top: -50px;
-	margin-right: 373px;
-}
-
-#fine {
-	margin-top: -52px;
-	margin-left: 297px;
-}
-
-#toggle {
-	margin-top: 5px;
-}
-
-#black {
-	margin-top: -51px;
-	margin-left: 431px;
-}
-
-#erase {
-	margin-top: -51px;
-	margin-right: 429px;
-}
-
+/*this is the div for the drawings*/
 #container {
 	display: grid;
-	border: 10px solid rgb(121, 4, 4);
+	border: 10px solid #f81d1d;
+	/* #790404 */
 	width: 500px;
 	height: 500px;
 	margin: 0 auto;
-	margin-top: 10px;
+	margin-top: 30px;
+	margin-left:300px;
 	background-color: #fff;
 }
 
@@ -79,4 +78,9 @@ body {
 
 .borderGrid {
 	border: 1px solid rgb(145, 142, 142);
+}
+
+body {
+	background-color: #000000;
+	/* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg/280px-Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg) */
 }
