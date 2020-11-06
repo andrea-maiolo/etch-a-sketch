@@ -6,7 +6,7 @@
 }
 /*these are the buttons displayed as grid*/
 .buttons{
-	margin-top:15px;
+	margin:15px 0px 0px -200px;
 	display: grid;
 	justify-content: left;
 	grid-template-columns: repeat(3, 100px);
@@ -16,7 +16,6 @@
         "Reset rainbow fine"
         "toggle black erase";
 }
-
 #rainbow {grid-area: rainbow;}
 
 #fine {grid-area: fine;}
@@ -57,7 +56,7 @@ button:active {
 /*this is the div for the drawings*/
 #container {
 	display: grid;
-	border: 10px solid #f81d1d;
+	border: 10px solid #0069ed;
 	/* #790404 */
 	width: 500px;
 	height: 500px;
@@ -79,8 +78,14 @@ button:active {
 .borderGrid {
 	border: 1px solid rgb(145, 142, 142);
 }
-
+#title{
+	position: relative;
+	bottom:200px;
+	left:96px;
+	color:#0047a1;
+	font-size: 50px;
+}
 body {
-	background-color: #000000;
-	/* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg/280px-Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg) */
+	background-color: #00ed84;
+	/* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg/280px-Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg); */
 }
