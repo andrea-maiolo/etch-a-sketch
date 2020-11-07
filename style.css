@@ -1,91 +1,114 @@
 /* this is the main div that conteins everything */
-.content{
-	display:flex;
-	align-items: center;
-	justify-content: center;
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 /*these are the buttons displayed as grid*/
-.buttons{
-	margin:15px 0px 0px -200px;
-	display: grid;
-	justify-content: left;
-	grid-template-columns: repeat(3, 100px);
-    grid-template-rows:repeat(2, 80px); 
+.buttons {
+    margin: 15px 0px 0px -200px;
+    display: grid;
+    justify-content: left;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 80px);
     gap: 2px 2px;
     grid-template-areas:
         "Reset rainbow fine"
         "toggle black erase";
 }
-#rainbow {grid-area: rainbow;}
 
-#fine {grid-area: fine;}
+#rainbow {
+    grid-area: rainbow;
+}
 
-#toggle {grid-area: toggle;}
+#fine {
+    grid-area: fine;
+}
 
-#black {grid-area: black;}
+#toggle {
+    grid-area: toggle;
+}
 
-#erase {grid-area: erase;}
+#black {
+    grid-area: black;
+}
+
+#erase {
+    grid-area: erase;
+}
 
 /*the button style*/
 button {
-	display: block;
-	border: none;
-	background: #0069ed;
-	color: #ffffff;
-	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	font-size: 1rem;
-	cursor: pointer;
-	text-align: center;
-	transition: 250ms ease-in-out,
-		transform 150ms ease;
+    display: block;
+    border: none;
+    background: #0069ed;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: 250ms ease-in-out,
+        transform 150ms ease;
 }
+
 /*more style for when buttons are clicked*/
 button:hover,
 button:focus {
-	background: #0053ba;
+    background: #0053ba;
 }
 
 button:focus {
-	outline: 1px solid #fff;
-	outline-offset: -4px;
+    outline: 1px solid #fff;
+    outline-offset: -4px;
 }
 
 button:active {
-	transform: scale(0.99);
+    transform: scale(0.99);
 }
+
 /*this is the div for the drawings*/
 #container {
-	display: grid;
-	border: 10px solid #0069ed;
-	/* #790404 */
-	width: 500px;
-	height: 500px;
-	margin: 0 auto;
-	margin-top: 30px;
-	margin-left:300px;
-	background-color: #fff;
+    display: grid;
+    border: 10px solid #0069ed;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-left: 300px;
+    background-color: #fff;
 }
 
 .gridItem {
-	background-color: #fff;
-	;
-}
-
-.change {
-	background-color: black;
+    background-color: #fff;
+    ;
 }
 
 .borderGrid {
-	border: 1px solid rgb(145, 142, 142);
+    border: 1px solid rgb(145, 142, 142);
 }
-#title{
-	position: relative;
-	bottom:200px;
-	left:96px;
-	color:#0047a1;
-	font-size: 50px;
+
+#title {
+    position: relative;
+    bottom: 200px;
+    left: 96px;
+    color: #0047a1;
+    font-size: 50px;
 }
+
 body {
-	background-color: #00ed84;
-	/* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg/280px-Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg); */
+    background-color: #00ed84;
+}
+
+/* those are the classes that on toggle will change the effects */
+.change {
+    background-color:#000000;
+}
+
+.rainbow{
+	background-color: #ff0000;
+}
+
+.erase{
+	background-color: #ffffff;
 }
